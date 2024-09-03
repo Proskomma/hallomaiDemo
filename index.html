@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallomai Converter Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hallomai Converter Demo</h1>
+        <p>Demonstrating fast and reliable format conversions with Hallomai</p>
+
+        <div class="conversion-box">
+            <h2>Step 1: Upload USFM File</h2>
+            <input type="file" id="fileInput" accept=".usfm" />
+            <button id="startBtn" disabled>Start Conversion</button>
+        </div>
+
+        <div class="conversion-box">
+            <h2>Step 2: Conversion Progress</h2>
+            <div id="progressContainer">
+                <div id="progressBar"><div id="progressText">0%</div></div>
+            </div>
+        </div>
+
+        <div class="conversion-box">
+            <h2>Step 3: Conversion Results</h2>
+            <div id="results">
+                <div id="usfmToUsx" class="result-step">
+                    <h3>USFM to USX</h3>
+                    <pre id="usxResult"></pre>
+                    <button class="copy-button" data-target="usxResult">Copy USX Result</button>
+                    <span id="timeUsfmToUsx"></span>
+                </div>
+                <div id="usxToJson" class="result-step">
+                    <h3>USX to USJ</h3>
+                    <pre id="jsonResult" class="json"></pre>
+                    <button class="copy-button" data-target="jsonResult">Copy USJ Result</button>
+                    <span id="timeUsxToJson"></span>
+                </div>
+                <div id="jsonToUsfm" class="result-step">
+                    <h3>USJ to USFM</h3>
+                    <pre id="usfmResult"></pre>
+                    <button class="copy-button" data-target="usfmResult">Copy USFM Result</button>
+                    <span id="timeJsonToUsfm"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversion-box">
+            <h2>Total Time</h2>
+            <span id="totalTime"></span>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
